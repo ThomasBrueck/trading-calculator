@@ -8,7 +8,7 @@ type TraderRowProps = {
   accountValue: number | string;
   handleTraderChange: (
     id: number,
-    field: keyof Omit<Trader, "id" | "name">,
+    field: keyof Omit<Trader, "id">,
     value: string
   ) => void;
   removeTrader: (id: number) => void;
@@ -51,7 +51,7 @@ export default function TraderRow({
 
   const handleInputChange = (
     e: ChangeEvent<HTMLInputElement>,
-    field: keyof Omit<Trader, "id" | "name">
+    field: keyof Omit<Trader, "id">
   ) => {
     handleTraderChange(trader.id, field, e.target.value);
   };
@@ -62,7 +62,15 @@ export default function TraderRow({
       {/* Trader Name */}
       <td className="grid grid-cols-2 items-center md:table-cell p-3 md:p-4 bg-gray-800/80 md:bg-transparent border-b border-gray-700 md:border-none w-full">
         <span className="md:hidden font-semibold text-gray-400 text-sm uppercase tracking-wide">Trader</span>
-        <span className="font-bold text-sm md:text-base text-white text-right md:text-left break-words whitespace-normal">{trader.name}</span>
+        <div className="flex justify-end md:justify-start w-full">
+          <input
+            type="text"
+            value={trader.name}
+            onChange={(e) => handleTraderChange(trader.id, "name", e.target.value)}
+            className="p-1.5 md:p-2 rounded-md bg-transparent hover:bg-gray-700/50 focus:bg-gray-900 border border-transparent focus:border-blue-500 text-white w-full md:w-32 text-right md:text-left font-bold text-sm md:text-base focus:outline-none transition-colors"
+            placeholder="Nombre"
+          />
+        </div>
       </td>
 
       {/* Microlotaje */}

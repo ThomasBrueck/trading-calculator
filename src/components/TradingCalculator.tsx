@@ -47,7 +47,7 @@ export default function TradingCalculator() {
 
   const handleTraderChange = (
     id: number,
-    field: keyof Omit<Trader, "id" | "name">,
+    field: keyof Omit<Trader, "id">,
     value: string
   ) => {
     setTraders((prevTraders) =>
