@@ -17,6 +17,15 @@ export default function Page() {
         </div>
       </div>
       <TradingCalculator />
+
+      <footer className="mt-16 w-full max-w-7xl text-[10px] sm:text-xs text-gray-500 text-justify leading-relaxed opacity-80 border-t border-gray-800 pt-8 pb-4 px-4 sm:px-0">
+        <p className="mb-3">
+          Las operaciones de trading conllevan riesgos inherentes y, al optar por aplicarlas en su plan de trading, el usuario debe ser consciente de que no habrá responsabilidad legal por las eventuales pérdidas o ganancias generadas. Las señales proporcionadas no están dirigidas a todos los inversores y deben ser evaluadas en relación con el capital de inversión individual. El inversor podría potencialmente perder todo su capital de inversión. El capital de riesgo es dinero que puede ser perdido sin poner en peligro la seguridad financiera o el estilo de vida del usuario. El capital destinado al trading debe ser capital de riesgo. Los resultados pasados no garantizan resultados futuros. Cada usuario es responsable de su cuenta y, en consecuencia, exime al broker o a sus IBs de cualquier responsabilidad relacionada con su dinero, resultados y operaciones.
+        </p>
+        <p>
+          No se autoriza su reenvío, copia, distribución o uso por terceros, parcial o totalmente, sin la autorización escrita y formalmente firmada. Cualquier incumplimiento de esta cláusula será objeto de acciones legales.
+        </p>
+      </footer>
     </main>
   );
 }
